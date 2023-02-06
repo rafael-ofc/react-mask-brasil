@@ -1,5 +1,3 @@
-export type KeyType = 'CPF'
-
 export const data = {
     CPF(value: string) {
         value = value.replace(/(\D)/g, '')

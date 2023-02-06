@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { data, KeyType } from "./data"
+import { data } from "./data"
+import { MainType } from "./types"
 
-export const useMask = (key: KeyType) => {
+export const useMask: MainType = (key) => {
     const [info, setInfo] = useState('')
 
     const setMask = (value: string) => {
@@ -9,5 +10,5 @@ export const useMask = (key: KeyType) => {
         setInfo(json)
     }
 
-    return { info, setMask }
+    return [info, setMask]
 }

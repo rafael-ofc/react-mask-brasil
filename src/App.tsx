@@ -1,7 +1,14 @@
 import { useMask } from "./lib"
+import { useForm } from 'react-hook-form';
 
 export default () => {
   let [teste, setTeste, dataTeste] = useMask('CPF_CNPJ')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
 
   console.log(dataTeste)
 
@@ -11,7 +18,7 @@ export default () => {
       <input
         type="text"
         value={teste}
-        onChange={e => setTeste(e.target.value)}
+        onChange={setTeste}
       />
     </div>
   )

@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { data } from "./src/data"
-import { MainType, InfoType, InputType } from "./src/types"
+import { data } from "./data"
+import { MainType, InfoType, InputType } from "./types"
 
-export const useMask: MainType = (key) => {
+const useMask: MainType = (key) => {
     const [info, setInfo] = useState<InfoType>({
         mask: '',
         base: undefined
@@ -19,3 +19,5 @@ export const useMask: MainType = (key) => {
 
     return [info.mask, setMask, info.base]
 }
+
+export default useMask;

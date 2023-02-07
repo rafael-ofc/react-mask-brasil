@@ -1,3 +1,3 @@
-const { useMask } = require("./src");
+const useMask = require("./src");
 
-export default useMask;
+module.exports = { useMask }

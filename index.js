@@ -1,3 +1,3 @@
-const useMask = require("./src");
+import useMask from "./dist";
 
 module.exports = { useMask }

@@ -1,5 +1,5 @@
 export const data = {
-    CPF(value: string) {
+    CPF(value) {
         let mask = value.replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d)/, '$1-$2')
@@ -7,7 +7,7 @@ export const data = {
         let base = parseInt(value)
         return { mask, base }
     },
-    CNPJ(value: string) {
+    CNPJ(value) {
         let mask = value.replace(/(\d{2})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d)/, '$1/$2')
@@ -16,7 +16,7 @@ export const data = {
         let base = parseInt(value)
         return { mask, base }
     },
-    CPF_CNPJ(value: string) {
+    CPF_CNPJ(value) {
         return (value.length > 11) ? this.CNPJ(value) : this.CPF(value)
     }
 }

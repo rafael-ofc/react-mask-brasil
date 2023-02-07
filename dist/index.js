@@ -1,14 +1,13 @@
 import { useState } from "react"
 import { data } from "./data"
-import { MainType, InfoType, InputType } from "./types"
 
-const useMask: MainType = (key) => {
-    const [info, setInfo] = useState<InfoType>({
+export default (key) => {
+    const [info, setInfo] = useState({
         mask: '',
         base: undefined
     })
 
-    const setMask = (e: InputType) => {
+    const setMask = (e) => {
         let json = data[key](e.target.value.replace(/(\D)/g, ''))
         if (json.mask === info.mask) return
         setInfo({
@@ -19,5 +18,3 @@ const useMask: MainType = (key) => {
 
     return [info.mask, setMask, info.base]
 }
-
-export default useMask;

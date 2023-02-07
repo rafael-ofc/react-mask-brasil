@@ -1,8 +1,8 @@
 import React from "react"
 
-export type KeyType = 'CPF' | 'CNPJ' | 'CPF_CNPJ'
+type KeyType = 'CPF' | 'CNPJ' | 'CPF_CNPJ'
 
-export type BaseType = undefined | number | Date
+type BaseType = undefined | number | Date
 
 export type InputType = React.ChangeEvent<HTMLInputElement>
 

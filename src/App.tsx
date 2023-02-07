@@ -1,7 +1,7 @@
 import { useMask } from "./lib"
 
 export default () => {
-  let [teste, setTeste, dataTeste] = useMask('CPF')
+  let [teste, setTeste, dataTeste] = useMask('CPF_CNPJ')
 
   console.log(dataTeste)
 

@@ -1,4 +1,4 @@
-type KeyType = 'CPF'
+type KeyType = 'CPF' | 'CNPJ' | 'CPF_CNPJ'
 
 type BaseType = undefined | number | Date
 
